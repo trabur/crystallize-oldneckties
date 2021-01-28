@@ -80,7 +80,7 @@ export function BasketProvider({ locale, children }) {
     () => ({
       locale,
       cart: clientBasket.cart.map(clientCartItemForAPI),
-      voucher: clientBasket.voucher,
+      voucherCode: clientBasket.voucherCode,
       crystallizeOrderId: clientBasket.crystallizeOrderId,
       klarnaOrderId: clientBasket.klarnaOrderId
     }),
@@ -155,6 +155,7 @@ export function BasketProvider({ locale, children }) {
         basketModel,
         cart: (serverBasket?.cart || []).map(withLocalState).filter(Boolean),
         total: serverBasket?.total || {},
+        voucherCode: clientBasket?.voucherCode,
         attentionCartItem,
         actions: {
           empty: () => dispatch({ action: 'empty' }),
@@ -163,6 +164,8 @@ export function BasketProvider({ locale, children }) {
           incrementItem: dispatchCartItemAction('increment-item'),
           decrementItem: dispatchCartItemAction('decrement-item'),
           drawAttention: (sku) => dispatch({ action: 'draw-attention', sku }),
+          applyVoucher: (voucherCode) =>
+            dispatch({ action: 'apply-voucher', voucherCode }),
           setCrystallizeOrderId: (crystallizeOrderId) =>
             dispatch({
               action: 'set-crystallize-order-id',

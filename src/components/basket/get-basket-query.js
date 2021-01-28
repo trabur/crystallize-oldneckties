@@ -38,6 +38,11 @@ export default `
           }
         }
       }
+      voucher {
+        code
+        discountAmount
+        discountPercent
+      }
     }
   }
 `;

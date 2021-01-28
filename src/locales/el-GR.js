@@ -69,6 +69,10 @@ export default {
         title: 'Επιβεβαίωση παραγγελίας',
         shortStatus: `Η παραγγελία σας έχει επιβεβαιωθεί.`,
         shortStatus_withEmail: `Η παραγγελία σας έχει επιβεβαιωθεί. Ένα αντίγραφο έχει αποσταλεί στη διεύθυνση: {{email}}`
+      },
+      vouchers: {
+        title: 'Voucher',
+        noPermissionMessage: 'Login to use vouchers.'
       }
     },
     order: {

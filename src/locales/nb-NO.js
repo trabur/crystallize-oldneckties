@@ -68,6 +68,10 @@ export default {
         title: 'Ordrebekreftelse',
         shortStatus: `Din ordre er bekreftet`,
         shortStatus_withEmail: `Din ordre er bekreftet. En kopi av ordren er send til {{email}}`
+      },
+      vouchers: {
+        title: 'Voucher',
+        noPermissionMessage: 'Login to use vouchers.'
       }
     },
     order: {

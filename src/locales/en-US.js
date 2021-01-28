@@ -71,6 +71,10 @@ export default {
         title: 'Order confirmation',
         shortStatus: `Your order has been confirmed.`,
         shortStatus_withEmail: `Your order has been confirmed. A copy of your order has been sent to {{email}}`
+      },
+      vouchers: {
+        title: 'Voucher',
+        noPermissionMessage: 'Login to use vouchers.'
       }
     },
     order: {

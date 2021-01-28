@@ -83,6 +83,13 @@ export default produce(function reducer(draft, { action, ...rest }) {
       break;
     }
 
+    case 'apply-voucher': {
+      // modify cart and apply voucher
+      // @todo: how can I modify the amount and total to pay if only the voucherCode is provided?
+      draft.clientBasket.voucherCode = rest.voucherCode;
+      break;
+    }
+
     case 'add-item':
     case 'remove-item':
     case 'increment-item':
